@@ -23,3 +23,37 @@ REX + 02 /r ADD r8*, r/m8* RM Valid N.E. Add r/m8 to r8.
 03 /r ADD r16, r/m16 RM Valid Valid Add r/m16 to r16.
 03 /r ADD r32, r/m32 RM Valid Valid Add r/m32 to r32.
 REX.W + 03 /r ADD r64, r/m64 RM Valid N.E. Add r/m64 to r64.
+
+## ADDPD
+
+66 0F 58 /r
+ADDPD xmm1, xmm2/m128
+RM V/V SSE2 Add packed double-precision floating-point 
+values from xmm2/m128 to xmm1.
+VEX.NDS.128.66.0F.WIG 58 /r
+VADDPD xmm1,xmm2, xmm3/m128
+RVM V/V AVX Add packed double-precision floating-point 
+values from xmm3/mem to xmm2 and stores 
+result in xmm1.
+VEX.NDS.256.66.0F.WIG 58 /r
+VADDPD ymm1, ymm2, ymm3/m256
+RVM V/V AVX Add packed double-precision floating-point 
+values from ymm3/mem to ymm2 and stores 
+result in ymm1.
+
+## ADDPS
+
+0F 58 /r
+ADDPS xmm1, xmm2/m128
+RM V/V SSE Add packed single-precision floating-point 
+values from xmm2/m128 to xmm1 and stores 
+result in xmm1.
+VEX.NDS.128.0F.WIG 58 /r
+VADDPS xmm1,xmm2, xmm3/m128
+RVM V/V AVX Add packed single-precision floating-point 
+values from xmm3/mem to xmm2 and stores 
+result in xmm1.
+VEX.NDS.256.0F.WIG 58 /r
+VADDPS ymm1, ymm2, ymm3/m256
+RVM V/V AVX Add packed single-precision floating-point 
+values from ymm3/me
