@@ -25,3 +25,15 @@ REX + 2A /r SUB r8*, r/m8* RM Valid N.E. Subtract r/m8 from r8.
 2B /r SUB r16, r/m16 RM Valid Valid Subtract r/m16 from r16.
 2B /r SUB r32, r/m32 RM Valid Valid Subtract r/m32 from r32.
 REX.W + 2B /r SUB r64, r/m64 RM Valid N.E. Subtract r/m64 from r64.
+
+## SUBPS
+
+0F 5C /r
+SUBPS xmm1 xmm2/m128
+RM V/V SSE Subtract packed single-precision floating-point values in xmm2/mem from xmm1.
+VEX.NDS.128.0F.WIG 5C /r
+VSUBPS xmm1,xmm2, xmm3/m128
+RVM V/V AVX Subtract packed single-precision floating-point values in xmm3/mem from xmm2 and stores result in xmm1.
+VEX.NDS.256.0F.WIG 5C /r
+VSUBPS ymm1, ymm2, ymm3/m256
+RVM V/V AVX Subtract packed single-precision floating-point values in ymm3/mem from ymm2 and stores result in ymm1.
