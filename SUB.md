@@ -37,3 +37,32 @@ RVM V/V AVX Subtract packed single-precision floating-point values in xmm3/mem f
 VEX.NDS.256.0F.WIG 5C /r
 VSUBPS ymm1, ymm2, ymm3/m256
 RVM V/V AVX Subtract packed single-precision floating-point values in ymm3/mem from ymm2 and stores result in ymm1.
+
+## SUBSD
+
+0F 5C /r
+SUBPS xmm1 xmm2/m128
+RM V/V SSE Subtract packed single-precision floating-point values in xmm2/mem from xmm1.
+VEX.NDS.128.0F.WIG 5C /r
+VSUBPS xmm1,xmm2, xmm3/m128
+RVM V/V AVX Subtract packed single-precision floating-point values in xmm3/mem from xmm2 and stores result in xmm1.
+VEX.NDS.256.0F.WIG 5C /r
+VSUBPS ymm1, ymm2, ymm3/m256
+RVM V/V AVX Subtract packed single-precision floating-point values in ymm3/mem from ymm2 and stores result in ymm1.
+
+## SUBSS
+
+0F 5C /r
+SUBPS xmm1 xmm2/m128
+RM V/V SSE Subtract packed single-precision floating-point 
+values in xmm2/mem from xmm1.
+VEX.NDS.128.0F.WIG 5C /r
+VSUBPS xmm1,xmm2, xmm3/m128
+RVM V/V AVX Subtract packed single-precision floating-point 
+values in xmm3/mem from xmm2 and stores 
+result in xmm1.
+VEX.NDS.256.0F.WIG 5C /r
+VSUBPS ymm1, ymm2, ymm3/m256
+RVM V/V AVX Subtract packed single-precision floating-point 
+values in ymm3/mem from ymm2 and stores 
+result in ymm1.
