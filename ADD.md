@@ -73,3 +73,27 @@ RM V/V SSE Add the low single-precision floating-pointvalue from xmm2/m32 to xmm
 VEX.NDS.LIG.F3.0F.WIG 58 /r
 VADDSS xmm1,xmm2, xmm3/m32
 RVM V/V AVX Add the low single-precision floating-point value from xmm3/mem to xmm2 and store the result in xmm1.
+
+## ADDSUBPD
+
+66 0F D0 /r
+ADDSUBPD xmm1, xmm2/m128
+RM V/V SSE3 Add/subtract double-precision floating-point 
+values from xmm2/m128 to xmm1.
+VEX.NDS.128.66.0F.WIG D0 /r
+VADDSUBPD xmm1, xmm2, xmm3/m128
+RVM V/V AVX Add/subtract packed double-precision 
+floating-point values from xmm3/mem to 
+xmm2 and stores result in xmm1.
+VEX.NDS.256.66.0F.WIG D0 /r
+VADDSUBPD ymm1, ymm2, ymm3/m256
+RVM V/V AVX Add / subtract packed double-precision 
+floating-point values from ymm3/mem to 
+ymm2 and stores result in ymm1.
+
+## ADDOS
+
+F3 0F 38 F6 /r RM V/V ADX Unsigned addition of r32 with OF, r/m32 to r32, writes OF.
+ADOX r32, r/m32
+REX.w + F3 0F 38 F6 /r RM V/NE ADX Unsigned addition of r64 with OF, r/m64 to r64, writes OF.
+ADOX r64, r/m64
