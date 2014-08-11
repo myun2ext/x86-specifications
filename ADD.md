@@ -57,3 +57,19 @@ VEX.NDS.256.0F.WIG 58 /r
 VADDPS ymm1, ymm2, ymm3/m256
 RVM V/V AVX Add packed single-precision floating-point 
 values from ymm3/me
+
+## ADDSD
+
+F2 0F 58 /r
+ADDSD xmm1, xmm2/m64 RM V/V SSE2 Add the low double-precision floating-point value from xmm2/m64 to xmm1.
+VEX.NDS.LIG.F2.0F.WIG 58 /r
+VADDSD xmm1, xmm2, xmm3/m64 RVM V/V AVX Add the low double-precision floating-point value from xmm3/mem to xmm2 and store the result in xmm1.
+
+## ADDSS
+
+F3 0F 58 /r
+ADDSS xmm1, xmm2/m32
+RM V/V SSE Add the low single-precision floating-pointvalue from xmm2/m32 to xmm1.
+VEX.NDS.LIG.F3.0F.WIG 58 /r
+VADDSS xmm1,xmm2, xmm3/m32
+RVM V/V AVX Add the low single-precision floating-point value from xmm3/mem to xmm2 and store the result in xmm1.
