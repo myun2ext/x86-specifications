@@ -8,3 +8,8 @@ Opcode Map
 * 2A-2D: SUB
 * 30-35: XOR
 * 3A-3D: CMP
+
+* 40-45: INC
+* 4A-4D: DEC
+* 50-55: PUSH
+* 5A-5D: POP
